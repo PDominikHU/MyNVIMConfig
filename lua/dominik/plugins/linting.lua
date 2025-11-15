@@ -6,6 +6,10 @@ return {
 
     lint.linters_by_ft = {
       python = { "pylint" },
+      php = { "phpstan" },
+      ruby = { "rubocop" },
+      bash = { "shellcheck" },
+      sh = { "shellcheck" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
@@ -45,12 +49,6 @@ return {
 
     local function try_linting()
       local linters = lint.linters_by_ft[vim.bo.filetype]
-
-      -- if linters then
-      --   -- remove_linter_if_missing_config_file(linters, "eslint_d", ".eslintrc.cjs")
-      --   remove_linter_if_missing_config_file(linters, "eslint_d", "eslint.config.js")
-      -- end
-
       lint.try_lint(linters)
     end
 

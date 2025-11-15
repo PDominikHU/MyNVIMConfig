@@ -20,6 +20,14 @@ return {
         liquid = { "prettier" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        php = { "pint" },
+        cpp = { "clang-format" },
+        c = { "clang-format" },
+        ruby = { "rubocop" },
+        sh = { "shfmt" },
+        bash = { "shfmt" },
+        zsh = { "shfmt" },
+        sql = { "sql-formatter" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -37,4 +45,3 @@ return {
     end, { desc = "Format file or range (in visual mode)" })
   end,
 }
-

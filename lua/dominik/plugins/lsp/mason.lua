@@ -2,7 +2,6 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      -- list of servers for mason to install
       ensure_installed = {
         "ts_ls",
         "html",
@@ -15,6 +14,12 @@ return {
         "prismals",
         "pyright",
         "eslint",
+        "intelephense",
+        "clangd",
+        "ruby_lsp",
+        "bashls",
+        "jsonls",
+        "sqlls",
       },
     },
     dependencies = {
@@ -37,12 +42,19 @@ return {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = {
       ensure_installed = {
-        "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
+        "prettier",
+        "stylua",
+        "isort",
+        "black",
         "pylint",
         "eslint_d",
+        "pint",
+        "phpstan",
+        "clang-format",
+        "rubocop",
+        "shfmt",
+        "shellcheck",
+        "sql-formatter",
       },
     },
     dependencies = {
